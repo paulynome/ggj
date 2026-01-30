@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://csu2htu7tqleq"]
 
+[ext_resource type="Texture2D" uid="uid://xqf48h84ibxd" path="res://sprites/Boy0v0.jpg" id="1_lti8b"]
+
 [sub_resource type="Gradient" id="Gradient_vsb4k"]
 offsets = PackedFloat32Array(0.3, 1)
 
@@ -64,3 +66,7 @@ text = "Start"
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Exit"
+
+[node name="Boy0v0" type="Sprite2D" parent="." unique_id=1578454133]
+position = Vector2(-3, 62)
+texture = ExtResource("1_lti8b")
