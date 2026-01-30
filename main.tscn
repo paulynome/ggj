@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://q3bf7ktvenmc"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
+sky_top_color = Color(0.08543492, 0, 0.63205296, 1)
+sky_horizon_color = Color(0.108393006, 9.642996e-05, 0.33150822, 1)
+sky_cover_modulate = Color(0.42377988, 0.0020861793, 0.91543573, 1)
+ground_bottom_color = Color(0, 0.21841586, 0.029624887, 1)
+ground_horizon_color = Color(0, 0.47158182, 0.19098666, 1)
+
+[sub_resource type="Sky" id="Sky_ig7tw"]
+sky_material = SubResource("ProceduralSkyMaterial_7dm0k")
+
+[sub_resource type="Environment" id="Environment_0xm2m"]
+background_mode = 2
+sky = SubResource("Sky_ig7tw")
+ambient_light_color = Color(0.31180158, 0, 0.10933056, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fa0ea"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_shjty"]
+
+[node name="Node3D" type="Node3D" unique_id=322932517]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=723875055]
+transform = Transform3D(0.950032, 0.088546425, -0.29933047, 1.2347828e-08, 0.95892376, 0.283664, 0.31215253, -0.26948988, 0.91100824, -1.9805698, 1.2953632, 3.7673092)
+environment = SubResource("Environment_0xm2m")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=511856499]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=581504463]
+shape = SubResource("BoxShape3D_fa0ea")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1966493460]
+mesh = SubResource("BoxMesh_shjty")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1215752980]
+transform = Transform3D(1, 0, 0, 0, -0.9847501, 0.17397502, 0, -0.17397502, -0.9847501, 9.1105, -7.07327, -82.31387)
+sky_mode = 2
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1193359958]
+transform = Transform3D(0.98899007, -0.086990036, -0.11971388, 0.14798202, 0.5813698, 0.8000691, 0, -0.8089759, 0.5878419, -0.58107376, 3.3944077, 2.2613573)
+light_energy = 9.345
+spot_range = 4096.0
+spot_angle = 12.7353
