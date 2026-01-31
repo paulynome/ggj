@@ -52,6 +52,12 @@ corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jq2sk"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4k2k6"]
+font_size = 70
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
 albedo_color = Color(0.05882353, 0.6901961, 0, 1)
 
@@ -125,8 +131,8 @@ shader_parameter/cirrus_absorption = 2.0
 shader_parameter/cirrus_sky_tint_fade = 0.5
 shader_parameter/cirrus_size = 1.0
 shader_parameter/cirrus_uv = Vector2(0.16, 0.11)
-shader_parameter/cirrus_position1 = Vector2(0.2761429, 0.2761429)
-shader_parameter/cirrus_position2 = Vector2(0.2761429, 0.2761429)
+shader_parameter/cirrus_position1 = Vector2(0.30498594, 0.30498594)
+shader_parameter/cirrus_position2 = Vector2(0.30498594, 0.30498594)
 shader_parameter/cirrus_texture = ExtResource("5_w48qg")
 shader_parameter/cumulus_visible = true
 shader_parameter/cumulus_intensity = 0.6
@@ -136,7 +142,7 @@ shader_parameter/cumulus_absorption = 2.0
 shader_parameter/cumulus_noise_freq = 2.7
 shader_parameter/cumulus_sky_tint_fade = 0.0
 shader_parameter/cumulus_size = 0.5
-shader_parameter/cumulus_position = Vector2(6.3806815, 6.3806815)
+shader_parameter/cumulus_position = Vector2(1.5248885, 1.5248885)
 shader_parameter/cumulus_texture = ExtResource("6_vivmo")
 shader_parameter/cumulus_partial_mie_phase = Vector3(0.957564, 1.042436, 0.412)
 shader_parameter/cumulus_mie_intensity = 1.0
@@ -172,6 +178,7 @@ metadata/_edit_lock_ = true
 [node name="HUD" type="CanvasLayer" parent="." unique_id=191907570]
 
 [node name="Button" type="Button" parent="HUD" unique_id=2031749519]
+visible = false
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -185,6 +192,21 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_kq58d")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_htxhm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_seu75")
 text = "Kill"
+
+[node name="Score" type="Label" parent="HUD" unique_id=50454853]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -93.5
+offset_top = 73.0
+offset_right = 93.5
+offset_bottom = 169.0
+grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jq2sk")
+text = "10"
+label_settings = SubResource("LabelSettings_4k2k6")
+horizontal_alignment = 1
 
 [node name="Timer" type="Timer" parent="." unique_id=1804428533]
 unique_name_in_owner = true

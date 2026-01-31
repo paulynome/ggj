@@ -4,6 +4,7 @@ extends Node3D
 @export var MonsterSprites:Array[Texture]
 @onready var entityScene = preload("res://entity.tscn")
 @onready var timer:Timer = %Timer
+var score:int = 0
 
 var rng = RandomNumberGenerator.new()
 
@@ -42,6 +43,8 @@ func _process(delta: float) -> void:
 			if (entity.entity_class == CHILD) :
 				get_tree().change_scene_to_file("res://menu.tscn")
 			entity.free()
+			score += 1
+			timer.wait_time *= 0.99
 			
 	if Input.is_action_just_pressed("candy") :
 		if %Path3D.get_child_count() > 0:
@@ -49,8 +52,10 @@ func _process(delta: float) -> void:
 			if (entity.entity_class == MONSTER) :
 				get_tree().change_scene_to_file("res://menu.tscn")
 			entity.free()
+			score += 1
+			timer.wait_time *= 0.99
 			
-	pass
+	%Score.text = str(score)
 
 
 func _on_timer_timeout() -> void:
