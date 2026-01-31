@@ -37,6 +37,7 @@ func _process(delta: float) -> void:
 			
 			
 	if Input.is_action_just_pressed("kill") :
+		if %Path3D.get_child_count() > 0:
 			var entity:PathFollow3D = %Path3D.get_child(0)
 			if (entity.entity_class == CHILD) :
 				get_tree().change_scene_to_file("res://menu.tscn")

@@ -31,6 +31,27 @@
 [ext_resource type="PackedScene" uid="uid://b0a7vmwju2p6k" path="res://assets/fantasy/Models/GLB format/tree-crooked.glb" id="27_a6jrf"]
 [ext_resource type="PackedScene" uid="uid://b46kaavxo31xy" path="res://assets/Models/FBX format/tree-small.fbx" id="28_xuqvo"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kq58d"]
+bg_color = Color(0.62933844, 0, 0.09454159, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htxhm"]
+bg_color = Color(0.3342291, 3.5195612e-07, 0.030665172, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_seu75"]
+bg_color = Color(0.8073369, 0.000114936236, 0.13078648, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
 albedo_color = Color(0.05882353, 0.6901961, 0, 1)
 
@@ -104,8 +125,8 @@ shader_parameter/cirrus_absorption = 2.0
 shader_parameter/cirrus_sky_tint_fade = 0.5
 shader_parameter/cirrus_size = 1.0
 shader_parameter/cirrus_uv = Vector2(0.16, 0.11)
-shader_parameter/cirrus_position1 = Vector2(0.64268625, 0.64268625)
-shader_parameter/cirrus_position2 = Vector2(0.64268625, 0.64268625)
+shader_parameter/cirrus_position1 = Vector2(0.2761429, 0.2761429)
+shader_parameter/cirrus_position2 = Vector2(0.2761429, 0.2761429)
 shader_parameter/cirrus_texture = ExtResource("5_w48qg")
 shader_parameter/cumulus_visible = true
 shader_parameter/cumulus_intensity = 0.6
@@ -115,7 +136,7 @@ shader_parameter/cumulus_absorption = 2.0
 shader_parameter/cumulus_noise_freq = 2.7
 shader_parameter/cumulus_sky_tint_fade = 0.0
 shader_parameter/cumulus_size = 0.5
-shader_parameter/cumulus_position = Vector2(3.2134922, 3.2134922)
+shader_parameter/cumulus_position = Vector2(6.3806815, 6.3806815)
 shader_parameter/cumulus_texture = ExtResource("6_vivmo")
 shader_parameter/cumulus_partial_mie_phase = Vector3(0.957564, 1.042436, 0.412)
 shader_parameter/cumulus_mie_intensity = 1.0
@@ -150,12 +171,20 @@ metadata/_edit_lock_ = true
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=191907570]
 
-[node name="Label" type="Label" parent="HUD" unique_id=124470540]
-offset_left = 411.0
-offset_top = 250.0
-offset_right = 451.0
-offset_bottom = 273.0
-text = "YO"
+[node name="Button" type="Button" parent="HUD" unique_id=2031749519]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = -152.0
+offset_right = 284.0
+offset_bottom = -48.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_kq58d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_htxhm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_seu75")
+text = "Kill"
 
 [node name="Timer" type="Timer" parent="." unique_id=1804428533]
 unique_name_in_owner = true
