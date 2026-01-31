@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://ddcporm00tyon"
-path="res://.godot/imported/mamamia?.wav-0836ec8d5da6d01d4d62c7d246b0bd82.sample"
+uid="uid://412he466c54"
+path="res://.godot/imported/mamamia.wav-4603ec9543886f6adf9ec1610619f361.sample"
 
 [deps]
 
-source_file="res://sounds/mamamia?.wav"
-dest_files=["res://.godot/imported/mamamia?.wav-0836ec8d5da6d01d4d62c7d246b0bd82.sample"]
+source_file="res://sounds/mamamia.wav"
+dest_files=["res://.godot/imported/mamamia.wav-4603ec9543886f6adf9ec1610619f361.sample"]
 
 [params]
 
