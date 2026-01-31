@@ -16,7 +16,7 @@
 [ext_resource type="Script" uid="uid://c3pd2ojgh00q0" path="res://area_3_ddoor.gd" id="14_0n4cl"]
 [ext_resource type="PackedScene" uid="uid://ceubfppaebwow" path="res://door.tscn" id="15_yd4ue"]
 [ext_resource type="FontFile" uid="uid://cx5pd2fgfvry1" path="res://fonts/HelpMe.ttf" id="16_m4stk"]
-[ext_resource type="PackedScene" uid="uid://d3ax4heaq1o6a" path="res://assets/guns/rifle.fbx" id="17_jrr3x"]
+[ext_resource type="PackedScene" uid="uid://270u3unlywhq" path="res://assets/rifle.fbx" id="17_jrr3x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kspu8"]
 albedo_color = Color(0.6605981, 0.29449254, 0.26005962, 1)
@@ -87,8 +87,8 @@ shader_parameter/cirrus_absorption = 2.0
 shader_parameter/cirrus_sky_tint_fade = 0.5
 shader_parameter/cirrus_size = 1.0
 shader_parameter/cirrus_uv = Vector2(0.16, 0.11)
-shader_parameter/cirrus_position1 = Vector2(0.0070239417, 0.0070239417)
-shader_parameter/cirrus_position2 = Vector2(0.0070239417, 0.0070239417)
+shader_parameter/cirrus_position1 = Vector2(0.29496714, 0.29496714)
+shader_parameter/cirrus_position2 = Vector2(0.29496714, 0.29496714)
 shader_parameter/cirrus_texture = ExtResource("4_qnw6w")
 shader_parameter/cumulus_visible = true
 shader_parameter/cumulus_intensity = 0.6
@@ -98,7 +98,7 @@ shader_parameter/cumulus_absorption = 2.0
 shader_parameter/cumulus_noise_freq = 2.7
 shader_parameter/cumulus_sky_tint_fade = 0.0
 shader_parameter/cumulus_size = 0.5
-shader_parameter/cumulus_position = Vector2(0.035119638, 0.035119638)
+shader_parameter/cumulus_position = Vector2(1.4747819, 1.4747819)
 shader_parameter/cumulus_texture = ExtResource("5_mu67t")
 shader_parameter/cumulus_partial_mie_phase = Vector3(0.957564, 1.042436, 0.412)
 shader_parameter/cumulus_mie_intensity = 1.0
@@ -303,8 +303,8 @@ font = ExtResource("16_m4stk")
 font_size = 20
 outline_size = 4
 
-[node name="rifle" parent="." unique_id=835093547 instance=ExtResource("17_jrr3x")]
-transform = Transform3D(0.53368837, 0.8456812, 0, -0.7881334, 0.49737138, 0.36258444, 0.30663085, -0.1935071, 0.9319509, -1.3270012, -0.04614091, -3.2822952)
+[node name="rifle" parent="." unique_id=672194332 instance=ExtResource("17_jrr3x")]
+transform = Transform3D(0.38464895, 0.92134225, 0.056334212, -0.91353065, 0.37121892, 0.16630799, 0.1323143, -0.11543323, 0.9844635, -1.3737768, 0.71236783, -3.8455641)
 
 [connection signal="body_entered" from="Area3Dplay" to="Area3Dplay" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3Ddoor" to="Area3Ddoor" method="_on_body_entered"]

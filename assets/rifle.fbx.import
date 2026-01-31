@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://paie3yq8m63o"
-path="res://.godot/imported/FN F2000.fbx-96a388f1095813e60bdfe93a57925d09.scn"
+uid="uid://270u3unlywhq"
+path="res://.godot/imported/rifle.fbx-5ccc119f115c1d45665875f1776ddf9c.scn"
 
 [deps]
 
-source_file="res://assets/guns/GunAssets/FN F2000/FN F2000.fbx"
-dest_files=["res://.godot/imported/FN F2000.fbx-96a388f1095813e60bdfe93a57925d09.scn"]
+source_file="res://assets/rifle.fbx"
+dest_files=["res://.godot/imported/rifle.fbx-5ccc119f115c1d45665875f1776ddf9c.scn"]
 
 [params]
 
