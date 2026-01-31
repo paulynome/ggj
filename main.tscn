@@ -58,6 +58,39 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_4k2k6"]
 font_size = 70
 
+[sub_resource type="Animation" id="Animation_seu75"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 1.2717165, 2.138669)
+
+[sub_resource type="Animation" id="Animation_kq58d"]
+resource_name = "die"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 1.2717165, 2.138669, 0.3, 1, 0, 1.0796388, 2.138669, 0.6, 1, 0, 0.9658693, 2.138669)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.3, 1, 0, 0, 0.19096318, 0.9815972, 0.6, 1, 0, 0, -0.13539566, 0.9907916, 0.9, 1, -0.19224222, -0.026270673, -0.13282257, 0.97196245)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_seu75"]
+_data = {
+&"RESET": SubResource("Animation_seu75"),
+&"die": SubResource("Animation_kq58d")
+}
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
 albedo_color = Color(0.05882353, 0.6901961, 0, 1)
 
@@ -131,8 +164,8 @@ shader_parameter/cirrus_absorption = 2.0
 shader_parameter/cirrus_sky_tint_fade = 0.5
 shader_parameter/cirrus_size = 1.0
 shader_parameter/cirrus_uv = Vector2(0.16, 0.11)
-shader_parameter/cirrus_position1 = Vector2(0.30498594, 0.30498594)
-shader_parameter/cirrus_position2 = Vector2(0.30498594, 0.30498594)
+shader_parameter/cirrus_position1 = Vector2(0.5352793, 0.5352793)
+shader_parameter/cirrus_position2 = Vector2(0.5352793, 0.5352793)
 shader_parameter/cirrus_texture = ExtResource("5_w48qg")
 shader_parameter/cumulus_visible = true
 shader_parameter/cumulus_intensity = 0.6
@@ -142,7 +175,7 @@ shader_parameter/cumulus_absorption = 2.0
 shader_parameter/cumulus_noise_freq = 2.7
 shader_parameter/cumulus_sky_tint_fade = 0.0
 shader_parameter/cumulus_size = 0.5
-shader_parameter/cumulus_position = Vector2(1.5248885, 1.5248885)
+shader_parameter/cumulus_position = Vector2(2.6761854, 2.6761854)
 shader_parameter/cumulus_texture = ExtResource("6_vivmo")
 shader_parameter/cumulus_partial_mie_phase = Vector3(0.957564, 1.042436, 0.412)
 shader_parameter/cumulus_mie_intensity = 1.0
@@ -208,12 +241,95 @@ text = "10"
 label_settings = SubResource("LabelSettings_4k2k6")
 horizontal_alignment = 1
 
+[node name="DefeatChild" type="Label" parent="HUD" unique_id=2070025366]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -303.0
+offset_top = 232.0
+offset_right = 303.0
+offset_bottom = 328.0
+grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jq2sk")
+text = "You killed a child !"
+label_settings = SubResource("LabelSettings_4k2k6")
+horizontal_alignment = 1
+
+[node name="DefeatCandyMonster" type="Label" parent="HUD" unique_id=783046184]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -303.0
+offset_top = 237.0
+offset_right = 303.0
+offset_bottom = 333.0
+grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jq2sk")
+text = "You gave a candy to a monster !"
+label_settings = SubResource("LabelSettings_4k2k6")
+horizontal_alignment = 1
+
+[node name="DefeatChildTimeout" type="Label" parent="HUD" unique_id=57166564]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -535.5
+offset_top = 240.0
+offset_right = 535.5
+offset_bottom = 336.0
+grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jq2sk")
+text = "You didn't give a candy to the child"
+label_settings = SubResource("LabelSettings_4k2k6")
+horizontal_alignment = 1
+
+[node name="DefeatMonsterTimeout" type="Label" parent="HUD" unique_id=1534092810]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -587.5
+offset_top = 239.0
+offset_right = 587.5
+offset_bottom = 335.0
+grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jq2sk")
+text = "You got eaten by a monster !"
+label_settings = SubResource("LabelSettings_4k2k6")
+horizontal_alignment = 1
+
+[node name="Restart" type="Button" parent="HUD" unique_id=1334288632]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -126.5
+offset_top = 902.0
+offset_right = 126.5
+offset_bottom = 1006.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 70
+text = "Restart"
+
 [node name="Timer" type="Timer" parent="." unique_id=1804428533]
 unique_name_in_owner = true
 autostart = true
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1722179619]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_seu75")
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=244823305]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2717165, 2.138669)
+unique_name_in_owner = true
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 1.2717165, 2.138669)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2001343521]
 transform = Transform3D(7.8571987, 0, 0, 0, 0.34627923, 0, 0, 0, 1.0268954, -0.049945116, -0.6520686, -7.901596)
@@ -1390,4 +1506,5 @@ game_time_enabled = false
 dome_path = NodePath("../SkyDome")
 current_time = 23.9998
 
+[connection signal="pressed" from="HUD/Restart" to="." method="_on_restart_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
