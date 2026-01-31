@@ -3,6 +3,38 @@
 [ext_resource type="Script" uid="uid://do2jxvj1xnl81" path="res://character_body_3d.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://bleh7sqtnct4o" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cb8a05vkcppjs" path="res://sprites/Boy0.png" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://dw6m7s7j312xb" path="res://sprites/BoyM0.png" id="3_w48qg"]
+[ext_resource type="Shader" uid="uid://cvd0x7lon1ur6" path="res://addons/sky_3d/shaders/SkyMaterial.gdshader" id="4_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://cfqk60lpl5ljv" path="res://addons/sky_3d/assets/resources/SNoise.tres" id="5_w48qg"]
+[ext_resource type="Texture2D" uid="uid://cecwdqjol0ckd" path="res://addons/sky_3d/assets/textures/noiseClouds.png" id="6_vivmo"]
+[ext_resource type="Texture2D" uid="uid://2r8ylu6rg5dp" path="res://addons/sky_3d/assets/thirdparty/textures/moon/MoonMap.png" id="7_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://djpfuyxkryegn" path="res://addons/sky_3d/assets/textures/noise.jpg" id="8_yaehf"]
+[ext_resource type="Texture2D" uid="uid://bm7dot7t7u1q4" path="res://addons/sky_3d/assets/thirdparty/textures/milkyway/StarField.jpg" id="9_074og"]
+[ext_resource type="Texture2D" uid="uid://c1vwcdcdvb74a" path="res://addons/sky_3d/assets/thirdparty/textures/milkyway/Milkyway.jpg" id="10_cegan"]
+[ext_resource type="Script" uid="uid://deo0gxkmk2ahd" path="res://addons/sky_3d/src/Sky3D.gd" id="11_82xsv"]
+[ext_resource type="Script" uid="uid://b4tkplvh7fq40" path="res://addons/sky_3d/src/SkyDome.gd" id="12_getpj"]
+[ext_resource type="Script" uid="uid://cjmkcj8hwm7ts" path="res://addons/sky_3d/src/TimeOfDay.gd" id="13_ryguw"]
+[ext_resource type="PackedScene" uid="uid://dbv3j30mi2rej" path="res://assets/Models/GLB format/path-stones-long.glb" id="15_2cqfq"]
+[ext_resource type="ArrayMesh" uid="uid://7274ufl6p3yr" path="res://assets/Models/OBJ format/path-stones-short.obj" id="16_yaehf"]
+[ext_resource type="ArrayMesh" uid="uid://r0ywsefcutrc" path="res://assets/Models/OBJ format/path-stones-messy.obj" id="17_yaehf"]
+[ext_resource type="PackedScene" uid="uid://ce7eaytwyo0pn" path="res://assets/Models/GLB format/building-type-m.glb" id="18_074og"]
+[ext_resource type="PackedScene" uid="uid://cg8ngip84f57e" path="res://assets/Models/GLB format/fence.glb" id="19_cegan"]
+[ext_resource type="PackedScene" uid="uid://c531qn70ibusv" path="res://assets/Models/GLB format/tree-large.glb" id="20_82xsv"]
+[ext_resource type="PackedScene" uid="uid://bpj8xle1nu15y" path="res://assets/Models/GLB format/tree-small.glb" id="21_getpj"]
+[ext_resource type="PackedScene" uid="uid://d2lx6gfmo1dvw" path="res://assets/Models/FBX format/building-type-n.fbx" id="22_1u8w0"]
+[ext_resource type="PackedScene" uid="uid://67j5fmi1ldee" path="res://assets/Models/FBX format/building-type-u.fbx" id="23_0odxb"]
+[ext_resource type="PackedScene" uid="uid://bbkt1wyfrtqqm" path="res://assets/Models/FBX format/building-type-f.fbx" id="24_lswn8"]
+[ext_resource type="PackedScene" uid="uid://csfhnk18dmbc1" path="res://assets/Models/FBX format/building-type-a.fbx" id="25_0odxb"]
+[ext_resource type="PackedScene" uid="uid://df2j6hcccaxqu" path="res://assets/Models/FBX format/building-type-b.fbx" id="26_lswn8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+albedo_color = Color(0.05882353, 0.6901961, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_getpj"]
+albedo_color = Color(0.58, 0.493, 0.47559997, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ryguw"]
+albedo_color = Color(0.22091639, 0.1897483, 0.4195712, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0xm2m"]
 radius = 0.74902344
@@ -15,17 +47,136 @@ _data = {
 }
 point_count = 15
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ycdy4"]
+transparency = 1
+albedo_texture = ExtResource("3_w48qg")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d13ii"]
+shader = ExtResource("4_ycdy4")
+shader_parameter/sky_visible = true
+shader_parameter/color_correction = Vector2(0, 2.5)
+shader_parameter/ground_color = Color(0.3, 0.3, 0.3, 1)
+shader_parameter/horizon_offset = 0.0
+shader_parameter/atm_darkness = 0.5
+shader_parameter/atm_sun_intensity = 18.0
+shader_parameter/atm_day_tint = Color(0.807843, 0.909804, 1, 1)
+shader_parameter/atm_horizon_light_tint = Color(0.980392, 0.635294, 0.462745, 1)
+shader_parameter/atm_night_tint = Color(0, 0, 0, 0)
+shader_parameter/atm_level_params = Vector3(1, 0, 0)
+shader_parameter/atm_thickness = 0.7
+shader_parameter/atm_beta_ray = Vector3(5.804544e-06, 1.3562913e-05, 3.311258e-05)
+shader_parameter/atm_beta_mie = Vector3(3.038e-08, 3.038e-08, 3.038e-08)
+shader_parameter/sun_light_color = Color(1, 1, 1, 1)
+shader_parameter/sun_disk_color = Color(0.996094, 0.541334, 0.140076, 1)
+shader_parameter/sun_disk_intensity = 30.0
+shader_parameter/sun_disk_size = 0.02
+shader_parameter/atm_sun_mie_tint = Color(1, 1, 1, 1)
+shader_parameter/atm_sun_mie_intensity = 1.0
+shader_parameter/atm_sun_partial_mie_phase = Vector3(0.36, 1.64, 1.6)
+shader_parameter/moon_color = Color(1, 1, 1, 1)
+shader_parameter/moon_texture = ExtResource("7_2cqfq")
+shader_parameter/moon_texture_alignment = Vector3(7, 1.4, 4.8)
+shader_parameter/moon_texture_flip_u = false
+shader_parameter/moon_texture_flip_v = false
+shader_parameter/moon_size = 0.07
+shader_parameter/atm_moon_mie_tint = Color(0.137255, 0.184314, 0.292196, 1)
+shader_parameter/atm_moon_mie_intensity = 0.0
+shader_parameter/atm_moon_partial_mie_phase = Vector3(0.36, 1.64, 1.6)
+shader_parameter/starmap_color = Color(0.70980394, 0.70980394, 0.70980394, 1)
+shader_parameter/starmap_texture = ExtResource("10_cegan")
+shader_parameter/starmap_flip_u = false
+shader_parameter/starmap_flip_v = false
+shader_parameter/starmap_alignment = Vector3(0, 100000, 250)
+shader_parameter/star_rotation_offset = 9.38899
+shader_parameter/star_rotation = -11.500325228479516
+shader_parameter/star_tilt = -1.2915436464758039
+shader_parameter/star_field_color = Color(1, 1, 1, 1)
+shader_parameter/star_field_texture = ExtResource("9_074og")
+shader_parameter/star_scintillation = 1.0
+shader_parameter/star_scintillation_speed = 0.01
+shader_parameter/noise_tex = ExtResource("8_yaehf")
+shader_parameter/clouds_night_color = Color(0.090196, 0.094118, 0.129412, 1)
+shader_parameter/cirrus_visible = true
+shader_parameter/cirrus_intensity = 2.0
+shader_parameter/cirrus_coverage = 0.5
+shader_parameter/cirrus_thickness = 1.7
+shader_parameter/cirrus_absorption = 2.0
+shader_parameter/cirrus_sky_tint_fade = 0.5
+shader_parameter/cirrus_size = 1.0
+shader_parameter/cirrus_uv = Vector2(0.16, 0.11)
+shader_parameter/cirrus_position1 = Vector2(0.21121825, 0.21121825)
+shader_parameter/cirrus_position2 = Vector2(0.21121825, 0.21121825)
+shader_parameter/cirrus_texture = ExtResource("5_w48qg")
+shader_parameter/cumulus_visible = true
+shader_parameter/cumulus_intensity = 0.6
+shader_parameter/cumulus_coverage = 0.55
+shader_parameter/cumulus_thickness = 0.0243
+shader_parameter/cumulus_absorption = 2.0
+shader_parameter/cumulus_noise_freq = 2.7
+shader_parameter/cumulus_sky_tint_fade = 0.0
+shader_parameter/cumulus_size = 0.5
+shader_parameter/cumulus_position = Vector2(26.12707, 26.12707)
+shader_parameter/cumulus_texture = ExtResource("6_vivmo")
+shader_parameter/cumulus_partial_mie_phase = Vector3(0.957564, 1.042436, 0.412)
+shader_parameter/cumulus_mie_intensity = 1.0
+shader_parameter/show_azimuthal_grid = false
+shader_parameter/azimuthal_grid_color = Color(0.87058824, 0.72156864, 0.5294118, 1)
+shader_parameter/azimuthal_grid_rotation_offset = 0.03
+shader_parameter/show_equatorial_grid = false
+shader_parameter/equatorial_grid_color = Color(0, 0.75, 1, 1)
+shader_parameter/equatorial_grid_rotation_offset = 0.03
+shader_parameter/moon_matrix = Basis(7.4505797e-09, 0.27001217, -0.9628569, -0.4750601, 0.8472691, 0.23759809, 0.87995327, 0.45741493, 0.12827201)
+
+[sub_resource type="Sky" id="Sky_1u8w0"]
+sky_material = SubResource("ShaderMaterial_d13ii")
+
+[sub_resource type="Environment" id="Environment_0odxb"]
+background_mode = 2
+sky = SubResource("Sky_1u8w0")
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+reflected_light_source = 2
+tonemap_mode = 3
+tonemap_white = 6.0
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_lswn8"]
+
 [node name="Node3D" type="Node3D" unique_id=1217932263]
 script = ExtResource("1_h2yge")
 metadata/_edit_lock_ = true
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=244823305]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.138669)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2717165, 2.138669)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2001343521]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5014229, -0.6520686, -7.901596)
+transform = Transform3D(7.8571987, 0, 0, 0, 0.34627923, 0, 0, 0, 1.0268954, -0.049945116, -0.6520686, -7.901596)
 use_collision = true
-size = Vector3(9.06031, 0.140625, 18.38498)
+size = Vector3(10.256718, 0.140625, 18.38498)
+material = SubResource("StandardMaterial3D_h2yge")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=607160391]
+transform = Transform3D(104.969635, 0, 0, 0, 0.34627923, 0, 0, 0, 2.8043509, -0.049945116, -0.6520686, -299.9128)
+use_collision = true
+size = Vector3(10.256718, 0.140625, 183.44395)
+material = SubResource("StandardMaterial3D_h2yge")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1673198675]
+transform = Transform3D(16.957233, 0, 0, 0, 0.34627923, 0, 0, 0, 0.20495018, -0.049945116, -0.48502874, -41.62297)
+use_collision = true
+size = Vector3(10.256718, 0.140625, 18.38498)
+material = SubResource("StandardMaterial3D_getpj")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=863388562]
+transform = Transform3D(16.957233, 0, 0, 0, 0.34627923, 0, 0, 0, 1.0471283, -0.049945116, -0.6520686, -30.181393)
+use_collision = true
+size = Vector3(10.256718, 0.140625, 18.38498)
+material = SubResource("StandardMaterial3D_ryguw")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1685308417]
+transform = Transform3D(16.621038, 0, 0, 0, 0.34627923, 0, 0, 0, 0.20495018, -0.049945116, -0.48410082, -18.945206)
+use_collision = true
+size = Vector3(10.256718, 0.140625, 18.38498)
+material = SubResource("StandardMaterial3D_getpj")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=562625984]
 transform = Transform3D(0.495, 0, 0, 0, 0.495, 0, 0, 0, 0.495, 0.3720253, 1.7205642, -10.156723)
@@ -45,5 +196,221 @@ progress = 3.9357224
 rotation_mode = 0
 
 [node name="Sprite3D" type="Sprite3D" parent="Path3D/PathFollow3D" unique_id=116390777]
-transform = Transform3D(0.21449687, 0, 0, 0, 0.21449673, 0, 0, 0, 0.4742907, 0, 1.995, 0)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 1.995, 0)
+material_override = SubResource("StandardMaterial3D_ycdy4")
 texture = ExtResource("2_h2yge")
+
+[node name="Sky3D" type="WorldEnvironment" parent="." unique_id=1924392129]
+environment = SubResource("Environment_0odxb")
+camera_attributes = SubResource("CameraAttributesPractical_lswn8")
+script = ExtResource("11_82xsv")
+fog_enabled = false
+editor_time_enabled = false
+game_time_enabled = false
+current_time = 12.9
+skydome_energy = 2.5
+wind_direction = 2.35619451204804
+metadata/_custom_type_script = "uid://deo0gxkmk2ahd"
+
+[node name="SunLight" type="DirectionalLight3D" parent="Sky3D" unique_id=1587384994]
+transform = Transform3D(0.9293529, 0.27565852, -0.24559258, 0, 0.665215, 0.7466519, 0.3691928, -0.6939031, 0.61821944, -0.24559258, 0.7466519, 0.61821944)
+shadow_enabled = true
+
+[node name="MoonLight" type="DirectionalLight3D" parent="Sky3D" unique_id=1399949312]
+transform = Transform3D(0, -0.47506014, 0.8799533, 0.27001214, 0.8472691, 0.45741495, -0.9628569, 0.23759808, 0.12827201, 0.8799533, 0.45741495, 0.12827201)
+light_color = Color(0.572549, 0.776471, 0.956863, 1)
+light_energy = 0.0
+
+[node name="SkyDome" type="Node" parent="Sky3D" unique_id=1210918649]
+script = ExtResource("12_getpj")
+exposure = 2.5
+sun_azimuth = -3.519733
+sun_altitude = -0.7277817
+moon_azimuth = -1.7155482
+moon_altitude = -1.0957103
+fog_visible = false
+wind_direction = 2.35619451204804
+starmap_alignment = Vector3(0, 100000, 250)
+starmap_color = Color(0.70980394, 0.70980394, 0.70980394, 1)
+star_scintillation = 1.0
+
+[node name="TimeOfDay" type="Node" parent="Sky3D" unique_id=1778850072]
+script = ExtResource("13_ryguw")
+editor_time_enabled = false
+game_time_enabled = false
+dome_path = NodePath("../SkyDome")
+current_time = 12.9
+day = 2
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1634012545]
+transform = Transform3D(1, 0, 0, 0, 0.1778749, 0.984053, 0, -0.984053, 0.1778749, 0, 3.6817355, 1.0537176)
+spot_range = 6.074497
+spot_angle = 27.084347
+
+[node name="path-stones-long2" parent="." unique_id=708052360 instance=ExtResource("15_2cqfq")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -0.582, -15.202)
+
+[node name="PathStonesShort" type="MeshInstance3D" parent="." unique_id=1437818994]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.66993093, -0.5817561, -9.952982)
+mesh = ExtResource("16_yaehf")
+
+[node name="PathStonesMessy" type="MeshInstance3D" parent="." unique_id=1929224999]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -0.582, -11.032)
+mesh = ExtResource("17_yaehf")
+
+[node name="PathStonesMessy2" type="MeshInstance3D" parent="." unique_id=671444848]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -0.582, -6.557)
+mesh = ExtResource("17_yaehf")
+
+[node name="PathStonesMessy3" type="MeshInstance3D" parent="." unique_id=2097388323]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -0.582, -2.093)
+mesh = ExtResource("17_yaehf")
+
+[node name="fences" type="Node3D" parent="." unique_id=1771694848]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="fencesR" type="Node3D" parent="fences" unique_id=946030878]
+
+[node name="fence2" parent="fences/fencesR" unique_id=1187184818 instance=ExtResource("19_cegan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.71433383, -0.116351224, -3.3550775)
+
+[node name="fence3" parent="fences/fencesR" unique_id=673417554 instance=ExtResource("19_cegan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1187984, -0.116351224, -3.3550775)
+
+[node name="fence4" parent="fences/fencesR" unique_id=23679252 instance=ExtResource("19_cegan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5205368, -0.116351224, -3.3550775)
+
+[node name="fence5" parent="fences/fencesR" unique_id=1353073442 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, 1.7183491, -0.116351224, -3.155867)
+
+[node name="fence6" parent="fences/fencesR" unique_id=601580675 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, 1.7183491, -0.116351224, -2.7573795)
+
+[node name="fence7" parent="fences/fencesR" unique_id=583063892 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, 1.7183491, -0.116351224, -2.353452)
+
+[node name="fence8" parent="fences/fencesR" unique_id=1310155071 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, 1.7183491, -0.116351224, -1.941593)
+
+[node name="fence9" parent="fences/fencesR" unique_id=1466531083 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, 1.7183491, -0.116351224, -1.538118)
+
+[node name="fence10" parent="fences/fencesR" unique_id=651988091 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, 1.7183491, -0.116351224, -1.1396306)
+
+[node name="fence11" parent="fences/fencesR" unique_id=1557233708 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, 1.7183491, -0.116351224, -0.73570293)
+
+[node name="fence12" parent="fences/fencesR" unique_id=1625051203 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, 1.7183491, -0.116351224, -0.32384396)
+
+[node name="fencesR2" type="Node3D" parent="fences" unique_id=2128047505]
+
+[node name="fence13" parent="fences/fencesR2" unique_id=454811538 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, -1.754913, -0.116351224, -3.155867)
+
+[node name="fence14" parent="fences/fencesR2" unique_id=1984032372 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, -1.754913, -0.116351224, -2.7573795)
+
+[node name="fence15" parent="fences/fencesR2" unique_id=281981157 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, -1.754913, -0.116351224, -2.353452)
+
+[node name="fence16" parent="fences/fencesR2" unique_id=1216071759 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, -1.754913, -0.116351224, -1.941593)
+
+[node name="fence17" parent="fences/fencesR2" unique_id=1639029343 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, -1.754913, -0.116351224, -1.538118)
+
+[node name="fence18" parent="fences/fencesR2" unique_id=529532050 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, -1.754913, -0.116351224, -1.1396306)
+
+[node name="fence19" parent="fences/fencesR2" unique_id=1626453416 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, -1.754913, -0.116351224, -0.73570293)
+
+[node name="fence20" parent="fences/fencesR2" unique_id=711518619 instance=ExtResource("19_cegan")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, -1.754913, -0.116351224, -0.32384396)
+
+[node name="fence21" parent="fences/fencesR2" unique_id=1992406218 instance=ExtResource("19_cegan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5359935, -0.116351224, -3.3550775)
+
+[node name="fence22" parent="fences/fencesR2" unique_id=1491041486 instance=ExtResource("19_cegan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.131529, -0.116351224, -3.3550775)
+
+[node name="fence23" parent="fences/fencesR2" unique_id=462128964 instance=ExtResource("19_cegan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7297905, -0.116351224, -3.3550775)
+
+[node name="trees" type="Node3D" parent="." unique_id=833142659]
+transform = Transform3D(16.621038, 0, 0, 0, 0.34627923, 0, 0, 0, 0.20495018, 0, 0, 0)
+
+[node name="tree-large2" parent="trees" unique_id=718594997 instance=ExtResource("20_82xsv")]
+transform = Transform3D(0.30082354, 0, 0, 0, 14.439213, 0, 0, 0, 24.396172, -0.28539088, -1.812759, -30.661413)
+
+[node name="tree-large3" parent="trees" unique_id=1995081136 instance=ExtResource("20_82xsv")]
+transform = Transform3D(0.30082354, 0, 0, 0, 14.439213, 0, 0, 0, 24.396172, 0.4485139, -1.812759, -30.661413)
+
+[node name="tree-large4" parent="trees" unique_id=2050320319 instance=ExtResource("20_82xsv")]
+transform = Transform3D(0.30082354, 0, 0, 0, 14.439213, 0, 0, 0, 24.396172, 0.4485139, -1.812759, -61.94427)
+
+[node name="tree-large5" parent="trees" unique_id=90553512 instance=ExtResource("20_82xsv")]
+transform = Transform3D(0.30082354, 0, 0, 0, 14.439213, 0, 0, 0, 24.396172, -0.18933664, -1.812759, -61.94427)
+
+[node name="tree-large6" parent="trees" unique_id=22720321 instance=ExtResource("20_82xsv")]
+transform = Transform3D(0.30082354, 0, 0, 0, 14.439213, 0, 0, 0, 24.396172, -0.18933664, -1.812759, -22.506903)
+
+[node name="tree-large7" parent="trees" unique_id=1399809178 instance=ExtResource("20_82xsv")]
+transform = Transform3D(0.30082354, 0, 0, 0, 14.439213, 0, 0, 0, 24.396172, -0.32145166, -1.812759, -22.506903)
+
+[node name="tree-large8" parent="trees" unique_id=253389847 instance=ExtResource("20_82xsv")]
+transform = Transform3D(0.30082354, 0, 0, 0, 14.439213, 0, 0, 0, 24.396172, 0.46024305, -1.812759, -22.506903)
+
+[node name="tree-large9" parent="trees" unique_id=355029508 instance=ExtResource("20_82xsv")]
+transform = Transform3D(0.30082354, 0, 0, 0, 14.439213, 0, 0, 0, 24.396172, 0.46024305, -1.812759, -45.1481)
+
+[node name="tree-large10" parent="trees" unique_id=688688336 instance=ExtResource("20_82xsv")]
+transform = Transform3D(0.30082354, 0, 0, 0, 14.439213, 0, 0, 0, 24.396172, 0.46024305, -1.812759, -45.1481)
+
+[node name="tree-small2" parent="trees" unique_id=418152132 instance=ExtResource("21_getpj")]
+transform = Transform3D(0.30082354, 0, 0, 0, 14.439213, 0, 0, 0, 24.396172, -0.23237582, -1.812759, -6.357121)
+
+[node name="tree-small3" parent="trees" unique_id=404510590 instance=ExtResource("21_getpj")]
+transform = Transform3D(0.30082354, 0, 0, 0, 14.439213, 0, 0, 0, 24.396172, 0.20931521, -1.812759, -6.357121)
+
+[node name="tree-small4" parent="trees" unique_id=1064631485 instance=ExtResource("21_getpj")]
+transform = Transform3D(0.30082354, 0, 0, 0, 14.439213, 0, 0, 0, 24.396172, 0.16879456, -1.812759, -72.09259)
+
+[node name="tree-small5" parent="trees" unique_id=1528850363 instance=ExtResource("21_getpj")]
+transform = Transform3D(0.30082354, 0, 0, 0, 14.439213, 0, 0, 0, 24.396172, -0.16237536, -1.812759, -72.09259)
+
+[node name="tree-small6" parent="trees" unique_id=1673631907 instance=ExtResource("21_getpj")]
+transform = Transform3D(0.30082354, 0, 0, 0, 14.439213, 0, 0, 0, 24.396172, -0.16237536, -1.812759, -72.09259)
+
+[node name="mainHouse" type="Node3D" parent="." unique_id=613793238]
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="mainHouse" unique_id=1616256723]
+transform = Transform3D(1, 0, 0, 0, 1.3081591, 0, 0, 0, 1, -0.6692735, 0.51177025, 1.3474882)
+size = Vector3(0.1, 3, 0.1)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="mainHouse" unique_id=869134628]
+transform = Transform3D(1, 0, 0, 0, 1.3081591, 0, 0, 0, 1, 0.72420394, 0.51177025, 1.3474882)
+size = Vector3(0.1, 3, 0.1)
+
+[node name="houses" type="Node3D" parent="." unique_id=721563499]
+transform = Transform3D(4.9999995, 0, 0, 0, 4.9999995, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="building-type-m2" parent="houses" unique_id=721485320 instance=ExtResource("18_074og")]
+transform = Transform3D(-3.0000002, 0, -4.5298742e-07, 0, 3.0000002, 0, 4.529874e-07, 0, -3, 0.53683573, 0, -13.552193)
+
+[node name="building-type-n" parent="houses" unique_id=1806657209 instance=ExtResource("22_1u8w0")]
+transform = Transform3D(-3, 0, -4.5298742e-07, 0, 3.825, 0, 4.5298745e-07, 0, -3, -6.616529, -0.007850219, -13.149216)
+
+[node name="building-type-u" parent="houses" unique_id=1735869768 instance=ExtResource("23_0odxb")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -14.351441, 0, -12.6806)
+
+[node name="building-type-f" parent="houses" unique_id=1881102683 instance=ExtResource("24_lswn8")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 12.754779, 0, -14.186144)
+
+[node name="building-type-a" parent="houses" unique_id=506847524 instance=ExtResource("25_0odxb")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 6.4873676, 0, -13.757108)
+
+[node name="building-type-b" parent="houses" unique_id=242744950 instance=ExtResource("26_lswn8")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 20.026264, 0, -13.74884)
