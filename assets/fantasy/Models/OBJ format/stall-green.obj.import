@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ce5j5vjvegeq2"
+path="res://.godot/imported/stall-green.obj-2535d281e00a152b9d84ec88172183bd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stall-green.obj-2535d281e00a152b9d84ec88172183bd.mesh"]
+
+source_file="res://assets/fantasy/Models/OBJ format/stall-green.obj"
+dest_files=["res://.godot/imported/stall-green.obj-2535d281e00a152b9d84ec88172183bd.mesh", "res://.godot/imported/stall-green.obj-2535d281e00a152b9d84ec88172183bd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

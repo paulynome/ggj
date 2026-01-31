@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://8avlhsk1mecp"
+path="res://.godot/imported/stairs-wide-stone.obj-82a3020bf67e9cedc7449dc1e420dc4b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stairs-wide-stone.obj-82a3020bf67e9cedc7449dc1e420dc4b.mesh"]
+
+source_file="res://assets/fantasy/Models/OBJ format/stairs-wide-stone.obj"
+dest_files=["res://.godot/imported/stairs-wide-stone.obj-82a3020bf67e9cedc7449dc1e420dc4b.mesh", "res://.godot/imported/stairs-wide-stone.obj-82a3020bf67e9cedc7449dc1e420dc4b.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
