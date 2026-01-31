@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://bleh7sqtnct4o" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cb8a05vkcppjs" path="res://sprites/Boy0.png" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://dw6m7s7j312xb" path="res://sprites/BoyM0.png" id="3_w48qg"]
+[ext_resource type="PackedScene" uid="uid://3j0udxbij6lp" path="res://entity.tscn" id="3_xuqvo"]
+[ext_resource type="Texture2D" uid="uid://byycw247olp1l" path="res://sprites/ghost1.png" id="4_qsp4k"]
 [ext_resource type="Shader" uid="uid://cvd0x7lon1ur6" path="res://addons/sky_3d/shaders/SkyMaterial.gdshader" id="4_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://cfqk60lpl5ljv" path="res://addons/sky_3d/assets/resources/SNoise.tres" id="5_w48qg"]
 [ext_resource type="Texture2D" uid="uid://cecwdqjol0ckd" path="res://addons/sky_3d/assets/textures/noiseClouds.png" id="6_vivmo"]
@@ -42,16 +44,12 @@ albedo_color = Color(0.22091639, 0.1897483, 0.4195712, 1)
 radius = 0.74902344
 height = 4.7079163
 
-[sub_resource type="Curve3D" id="Curve3D_1bvp3"]
+[sub_resource type="Curve3D" id="Curve3D_xuqvo"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -5.753621, 0, -17.866531, 0, 0, 0, 0, 0, 0, -0.57377046, 0, -16.756563, 0, 0, 0, 0, 0, 0, 1.2761765, 0, -16.139914, 0, 0, 0, 0, 0, 0, 2.9411297, 0, -15.461599, 0, 0, 0, 0, 0, 0, 3.3111172, 0, -13.919978, 0, 0, 0, 0, 0, 0, 3.187788, 0, -11.761706, 0, 0, 0, 0, 0, 0, 2.756134, 0, -10.281749, 0, 0, 0, 0, 0, 0, 2.0161552, 0, -9.233446, 0, 0, 0, 0, 0, 0, 0.47453314, 0, -8.555132, 0, 0, 0, 0, 0, 0, -0.14211649, 0, -7.5684943, 0, 0, 0, 0, 0, 0, -0.6970996, 0, -6.211866, 0, 0, 0, 0, 0, 0, -0.6970996, 0, -4.793573, 0, 0, 0, 0, 0, 0, -0.8820943, 0, -2.8819623, 0, 0, 0, 0, 0, 0, -0.2654447, 0, -1.0936804, 0, 0, 0, 0, 0, 0, -0.018785425, 0, -0.045376763),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -9.520336, -4.3988228e-05, -18.727345, 0, 0, 0, 0, 0, 0, -6.721818, -4.3988228e-05, -18.893923, 0, 0, 0, 0, 0, 0, -1.8244107, -4.3988228e-05, -18.927238, 0, 0, 0, 0, 0, 0, -0.2252562, -4.3988228e-05, -18.560766, 0, 0, 0, 0, 0, 0, 0.041269064, -4.3988228e-05, -16.928297, 0, 0, 0, 0, 0, 0, 0.074585676, -4.3988228e-05, -14.129778, 0, 0, 0, 0, 0, 0, 0.10790038, -4.3988228e-05, -12.497309, 0, 0, 0, 0, 0, 0, -0.09018469, -4.3988228e-05, -9.533028, 0, 0, 0, 0, 0, 0, -0.33684492, -4.3988228e-05, -7.189756, 0, 0, 0, 0, 0, 0, -0.52183867, -4.3988228e-05, -4.969814, 0, 0, 0, 0, 0, 0, -0.52183867, -4.3988228e-05, -2.688206, 0, 0, 0, 0, 0, 0, 0.15647554, -4.3988228e-05, -1.2082456, 0, 0, 0, 0, 0, 0, 0.10631481, -4.3988228e-05, -0.40537518, 0, 0, 0, 0, 0, 0, -0.029797409, -4.3988228e-05, 0.19578795, 0, 0, 0, 0, 0, 0, -0.029797409, -4.3988228e-05, 0.74023765, 0, 0, 0, 0, 0, 0, -0.029797409, -4.3988228e-05, 1.2733448),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
-point_count = 15
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ycdy4"]
-transparency = 1
-albedo_texture = ExtResource("3_w48qg")
+point_count = 16
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xuqvo"]
 shader = ExtResource("4_ycdy4")
@@ -82,7 +80,7 @@ shader_parameter/moon_texture_flip_u = false
 shader_parameter/moon_texture_flip_v = false
 shader_parameter/moon_size = 0.07
 shader_parameter/atm_moon_mie_tint = Color(0.137255, 0.184314, 0.292196, 1)
-shader_parameter/atm_moon_mie_intensity = 0.0
+shader_parameter/atm_moon_mie_intensity = 0.7
 shader_parameter/atm_moon_partial_mie_phase = Vector3(0.36, 1.64, 1.6)
 shader_parameter/starmap_color = Color(1, 1, 1, 0.85490197)
 shader_parameter/starmap_texture = ExtResource("10_cegan")
@@ -106,8 +104,8 @@ shader_parameter/cirrus_absorption = 2.0
 shader_parameter/cirrus_sky_tint_fade = 0.5
 shader_parameter/cirrus_size = 1.0
 shader_parameter/cirrus_uv = Vector2(0.16, 0.11)
-shader_parameter/cirrus_position1 = Vector2(0.9985513, 0.9985513)
-shader_parameter/cirrus_position2 = Vector2(0.9985513, 0.9985513)
+shader_parameter/cirrus_position1 = Vector2(0.64268625, 0.64268625)
+shader_parameter/cirrus_position2 = Vector2(0.64268625, 0.64268625)
 shader_parameter/cirrus_texture = ExtResource("5_w48qg")
 shader_parameter/cumulus_visible = true
 shader_parameter/cumulus_intensity = 0.6
@@ -117,7 +115,7 @@ shader_parameter/cumulus_absorption = 2.0
 shader_parameter/cumulus_noise_freq = 2.7
 shader_parameter/cumulus_sky_tint_fade = 0.0
 shader_parameter/cumulus_size = 0.5
-shader_parameter/cumulus_position = Vector2(4.9937186, 4.9937186)
+shader_parameter/cumulus_position = Vector2(3.2134922, 3.2134922)
 shader_parameter/cumulus_texture = ExtResource("6_vivmo")
 shader_parameter/cumulus_partial_mie_phase = Vector3(0.957564, 1.042436, 0.412)
 shader_parameter/cumulus_mie_intensity = 1.0
@@ -146,7 +144,22 @@ tonemap_white = 6.0
 
 [node name="Node3D" type="Node3D" unique_id=1217932263]
 script = ExtResource("1_h2yge")
+ChildSprites = Array[Texture]([ExtResource("2_h2yge")])
+MonsterSprites = Array[Texture]([ExtResource("3_w48qg"), ExtResource("4_qsp4k")])
 metadata/_edit_lock_ = true
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=191907570]
+
+[node name="Label" type="Label" parent="HUD" unique_id=124470540]
+offset_left = 411.0
+offset_top = 250.0
+offset_right = 451.0
+offset_bottom = 273.0
+text = "YO"
+
+[node name="Timer" type="Timer" parent="." unique_id=1804428533]
+unique_name_in_owner = true
+autostart = true
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=244823305]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2717165, 2.138669)
@@ -183,25 +196,22 @@ material = SubResource("StandardMaterial3D_getpj")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=562625984]
 transform = Transform3D(0.495, 0, 0, 0, 0.495, 0, 0, 0, 0.495, 0.3720253, 1.7205642, -10.156723)
+visible = false
 script = ExtResource("1_0xm2m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=2131763504]
+visible = false
 shape = SubResource("CapsuleShape3D_0xm2m")
 
 [node name="Path3D" type="Path3D" parent="." unique_id=1469977646]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.42, 0)
-curve = SubResource("Curve3D_1bvp3")
-
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=2106189203]
 unique_name_in_owner = true
-transform = Transform3D(0.9999982, 0, 0, 0, 1, 0, 0, 0, 0.9999982, -1.9050393, 0, -17.041836)
-progress = 3.9357224
-rotation_mode = 0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.42, 0)
+curve = SubResource("Curve3D_xuqvo")
 
-[node name="Sprite3D" type="Sprite3D" parent="Path3D/PathFollow3D" unique_id=116390777]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 1.995, 0)
-material_override = SubResource("StandardMaterial3D_ycdy4")
-texture = ExtResource("2_h2yge")
+[node name="PathFollow3D" parent="Path3D" unique_id=1263315414 instance=ExtResource("3_xuqvo")]
+transform = Transform3D(0.9999982, 0, 0, 0, 1, 0, 0, 0, 0.9999982, -5.5887556, -4.3988228e-05, -18.901628)
+entity_class = 1
+texture = ExtResource("4_qsp4k")
 
 [node name="path-stones-long2" parent="." unique_id=968383857 instance=ExtResource("15_2cqfq")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -0.582, -15.202)
@@ -1300,13 +1310,13 @@ wind_direction = 2.35619451204804
 metadata/_custom_type_script = "uid://deo0gxkmk2ahd"
 
 [node name="SunLight" type="DirectionalLight3D" parent="Sky3D" unique_id=1518419740]
-transform = Transform3D(0.9656312, 0.25788635, 0.03241971, 0.16016689, -0.68863416, 0.7071985, 0.20470214, -0.6777003, -0.7062714, 0.032419704, 13.715175, -36.05948)
-light_color = Color(2.9841065e-06, 0.7587648, 0.7730091, 1)
+transform = Transform3D(0.9656312, 0.25788632, 0.032419708, 0, 0.12473143, -0.9921906, -0.2599161, 0.9580902, 0.12044456, 0.032419704, -0.99219054, 0.12044455)
+light_color = Color(0.98, 0.523, 0.294, 1)
 light_energy = 0.0
 light_indirect_energy = 0.065
 
 [node name="MoonLight" type="DirectionalLight3D" parent="Sky3D" unique_id=1356479250]
-transform = Transform3D(0.85133827, -0.5233074, -0.037048325, -0.33196634, -0.5920465, 0.7343564, -0.40622848, -0.61288685, -0.67775226, -0.96850646, 7.952179, -15.733652)
+transform = Transform3D(0, -0.24898846, -0.96850646, -0.28295523, 0.92892665, -0.23881309, 0.95913315, 0.27404398, -0.070452586, -0.96850646, -0.23881309, -0.070452586)
 light_color = Color(0.572549, 0.776471, 0.956863, 1)
 light_energy = 0.0
 
@@ -1328,3 +1338,5 @@ editor_time_enabled = false
 game_time_enabled = false
 dome_path = NodePath("../SkyDome")
 current_time = 23.9998
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
