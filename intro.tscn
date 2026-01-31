@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://c8ria8o3fjer1"]
 
 [ext_resource type="Texture2D" uid="uid://t36o42np1g7h" path="res://sprites/breakingnews.png" id="1_7a8ye"]
-[ext_resource type="Script" path="res://intro.gd" id="1_y72e6"]
+[ext_resource type="Script" uid="uid://crsk2mv4cm7e2" path="res://intro.gd" id="1_y72e6"]
 [ext_resource type="Texture2D" uid="uid://dt0l8u6eyba4m" path="res://sprites/table.png" id="2_0a7ni"]
 [ext_resource type="Texture2D" uid="uid://by103viwwxfsb" path="res://sprites/pres.png" id="3_y72e6"]
 [ext_resource type="AudioStream" uid="uid://cbf83j2gh3yl" path="res://audio/ROYALTY FREE News Intro Music _ Breaking News Background Music Royalty Free by MUSIC4VIDEO.mp3" id="4_0a7ni"]
-[ext_resource type="Script" path="res://label.gd" id="6_u2rf6"]
+[ext_resource type="Script" uid="uid://d18tlaicmfxjk" path="res://label.gd" id="6_u2rf6"]
 [ext_resource type="Texture2D" uid="uid://dw6m7s7j312xb" path="res://sprites/BoyM0.png" id="6_y6ycx"]
 [ext_resource type="Script" uid="uid://cjj2omqm7btk4" path="res://scripts/monster_intro.gd" id="7_dpxxx"]
 [ext_resource type="AudioStream" uid="uid://tvqt762lpj4k" path="res://sounds/zombie2.wav" id="9_dk2oa"]

@@ -29,5 +29,5 @@ func _on_dialogue4_finished():
 	# lancer l'animation du monstre qui va tuer le pres:
 	$anim.play("monster_attack")
 
-	await $anim.animation_finished
+	await($anim.animation_finished)
 	get_tree().change_scene_to_file("res://titlescreen.tscn")
