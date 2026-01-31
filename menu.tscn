@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://csu2htu7tqleq"]
 
 [ext_resource type="Script" uid="uid://d30c63pj6f6cb" path="res://menu.gd" id="1_lti8b"]
-[ext_resource type="Texture2D" uid="uid://cb8a05vkcppjs" path="res://sprites/Boy0.png" id="2_ouk20"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vsb4k"]
 font_size = 72
@@ -81,11 +80,6 @@ text = "Start"
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Exit"
-
-[node name="Boy0v0" type="Sprite2D" parent="." unique_id=1578454133]
-position = Vector2(773, 359.72742)
-scale = Vector2(0.15952384, 0.15952381)
-texture = ExtResource("2_ouk20")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

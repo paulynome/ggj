@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bk262doo7ka4y"
+path="res://.godot/imported/candyC.obj-1a5b746370c82fb5c745f4b9432e15ea.mesh"
+
+[deps]
+
+files=["res://.godot/imported/candyC.obj-1a5b746370c82fb5c745f4b9432e15ea.mesh"]
+
+source_file="res://assets/spook/Models/obj/candyC.obj"
+dest_files=["res://.godot/imported/candyC.obj-1a5b746370c82fb5c745f4b9432e15ea.mesh", "res://.godot/imported/candyC.obj-1a5b746370c82fb5c745f4b9432e15ea.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

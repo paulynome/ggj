@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cgcy3k8ykl2kj"
+path="res://.godot/imported/pathDirt.obj-b54c9f95c9c56015c84e47bee8f40103.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pathDirt.obj-b54c9f95c9c56015c84e47bee8f40103.mesh"]
+
+source_file="res://assets/spook/Models/obj/pathDirt.obj"
+dest_files=["res://.godot/imported/pathDirt.obj-b54c9f95c9c56015c84e47bee8f40103.mesh", "res://.godot/imported/pathDirt.obj-b54c9f95c9c56015c84e47bee8f40103.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
