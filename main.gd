@@ -57,6 +57,7 @@ func _process(delta: float) -> void:
 			return			
 			
 	if Input.is_action_just_pressed("kill") && !timer.is_stopped() :
+		%GPUParticles3D.emitting = true
 		if %Path3D.get_child_count() > 0:
 			var entity:PathFollow3D = %Path3D.get_child(0)
 			if (entity.entity_class == CHILD) :
@@ -69,6 +70,7 @@ func _process(delta: float) -> void:
 			timer.wait_time *= 0.99
 			
 	if Input.is_action_just_pressed("candy") && !timer.is_stopped() :
+		%candyParticule.restart()
 		if %Path3D.get_child_count() > 0:
 			var entity:PathFollow3D = %Path3D.get_child(0)
 			if (entity.entity_class == MONSTER) :
