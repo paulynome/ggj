@@ -87,8 +87,8 @@ shader_parameter/cirrus_absorption = 2.0
 shader_parameter/cirrus_sky_tint_fade = 0.5
 shader_parameter/cirrus_size = 1.0
 shader_parameter/cirrus_uv = Vector2(0.16, 0.11)
-shader_parameter/cirrus_position1 = Vector2(0.29496714, 0.29496714)
-shader_parameter/cirrus_position2 = Vector2(0.29496714, 0.29496714)
+shader_parameter/cirrus_position1 = Vector2(0.083169125, 0.083169125)
+shader_parameter/cirrus_position2 = Vector2(0.083169125, 0.083169125)
 shader_parameter/cirrus_texture = ExtResource("4_qnw6w")
 shader_parameter/cumulus_visible = true
 shader_parameter/cumulus_intensity = 0.6
@@ -98,7 +98,7 @@ shader_parameter/cumulus_absorption = 2.0
 shader_parameter/cumulus_noise_freq = 2.7
 shader_parameter/cumulus_sky_tint_fade = 0.0
 shader_parameter/cumulus_size = 0.5
-shader_parameter/cumulus_position = Vector2(1.4747819, 1.4747819)
+shader_parameter/cumulus_position = Vector2(5.4165444, 5.4165444)
 shader_parameter/cumulus_texture = ExtResource("5_mu67t")
 shader_parameter/cumulus_partial_mie_phase = Vector3(0.957564, 1.042436, 0.412)
 shader_parameter/cumulus_mie_intensity = 1.0
@@ -301,7 +301,7 @@ Dev & Prog : Paulynome
 Music : Caramooel"
 font = ExtResource("16_m4stk")
 font_size = 20
-outline_size = 4
+outline_size = 7
 
 [node name="rifle" parent="." unique_id=672194332 instance=ExtResource("17_jrr3x")]
 transform = Transform3D(0.38464895, 0.92134225, 0.056334212, -0.91353065, 0.37121892, 0.16630799, 0.1323143, -0.11543323, 0.9844635, -1.3737768, 0.71236783, -3.8455641)
