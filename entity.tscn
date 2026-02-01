@@ -9,6 +9,28 @@ resource_local_to_scene = true
 transparency = 1
 albedo_texture = ExtResource("1_uqc13")
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nwmpt"]
+lifetime_randomness = 0.21
+emission_shape = 1
+emission_sphere_radius = 0.2
+inherit_velocity_ratio = 1.0
+spread = 180.0
+flatness = 0.769
+initial_velocity_min = 2.0
+initial_velocity_max = 3.0
+orbit_velocity_min = -0.75499994
+orbit_velocity_max = 0.0760001
+radial_velocity_min = -3.6000223
+radial_velocity_max = -2.2351742e-05
+gravity = Vector3(0, 0, 0)
+turbulence_noise_speed_random = 1.11
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nwmpt"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_03rkj"]
+material = SubResource("StandardMaterial3D_nwmpt")
+size = Vector3(0.1, 0.1, 0.1)
+
 [node name="PathFollow3D" type="PathFollow3D" unique_id=1263315414]
 transform = Transform3D(0.9999982, 0, 0, 0, 1, 0, 0, 0, 0.9999982, 0, 0, 0)
 progress = 3.9357224
@@ -20,3 +42,15 @@ script = ExtResource("1_nwmpt")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 1.995, 0)
 material_override = SubResource("StandardMaterial3D_ycdy4")
 texture = ExtResource("2_nwmpt")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1650890378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0004854211, 2.1776314, 0)
+emitting = false
+amount = 100
+lifetime = 0.4
+one_shot = true
+explosiveness = 0.8
+randomness = 1.0
+visibility_aabb = AABB(-4, -4, -4, 30, 8, 30)
+process_material = SubResource("ParticleProcessMaterial_nwmpt")
+draw_pass_1 = SubResource("BoxMesh_03rkj")

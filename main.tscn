@@ -8,35 +8,65 @@
 [ext_resource type="Texture2D" uid="uid://bkypj8rpxv11" path="res://sprites/skeletonH.png" id="4_ok6jj"]
 [ext_resource type="Texture2D" uid="uid://byycw247olp1l" path="res://sprites/ghost1.png" id="4_qsp4k"]
 [ext_resource type="Shader" uid="uid://cvd0x7lon1ur6" path="res://addons/sky_3d/shaders/SkyMaterial.gdshader" id="4_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://xub3i8uar0v4" path="res://sprites/humanmsk.png" id="5_rqtf5"]
 [ext_resource type="Texture2D" uid="uid://cfqk60lpl5ljv" path="res://addons/sky_3d/assets/resources/SNoise.tres" id="5_w48qg"]
+[ext_resource type="Texture2D" uid="uid://b6gwj6u6pki32" path="res://sprites/fillenorm.png" id="6_1vm84"]
 [ext_resource type="Texture2D" uid="uid://cuklb74exn7mk" path="res://sprites/ghostM1.png" id="6_facbu"]
 [ext_resource type="Texture2D" uid="uid://cecwdqjol0ckd" path="res://addons/sky_3d/assets/textures/noiseClouds.png" id="6_vivmo"]
 [ext_resource type="Texture2D" uid="uid://2r8ylu6rg5dp" path="res://addons/sky_3d/assets/thirdparty/textures/moon/MoonMap.png" id="7_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://b816a2ornjmqt" path="res://sprites/skeletonM.png" id="7_b1qrp"]
+[ext_resource type="Texture2D" uid="uid://cm3otumilt1eg" path="res://sprites/fillenormMask.png" id="7_wu3dr"]
+[ext_resource type="Texture2D" uid="uid://crqitglchkkpf" path="res://sprites/tentaM.png" id="8_ruth0"]
 [ext_resource type="Texture2D" uid="uid://djpfuyxkryegn" path="res://addons/sky_3d/assets/textures/noise.jpg" id="8_yaehf"]
 [ext_resource type="Texture2D" uid="uid://bm7dot7t7u1q4" path="res://addons/sky_3d/assets/thirdparty/textures/milkyway/StarField.jpg" id="9_074og"]
 [ext_resource type="Texture2D" uid="uid://c1vwcdcdvb74a" path="res://addons/sky_3d/assets/thirdparty/textures/milkyway/Milkyway.jpg" id="10_cegan"]
 [ext_resource type="Script" uid="uid://deo0gxkmk2ahd" path="res://addons/sky_3d/src/Sky3D.gd" id="11_82xsv"]
 [ext_resource type="ArrayMesh" uid="uid://bwueh4pyf005w" path="res://assets/spook/Models/obj/lampPost.obj" id="11_facbu"]
+[ext_resource type="Texture2D" uid="uid://xolxdqabdvsx" path="res://sprites/Cervol2v0.png" id="12_cyx1q"]
 [ext_resource type="Script" uid="uid://b4tkplvh7fq40" path="res://addons/sky_3d/src/SkyDome.gd" id="12_getpj"]
+[ext_resource type="Texture2D" uid="uid://tklw2gyat74e" path="res://sprites/zombie.png" id="13_0dhbp"]
 [ext_resource type="Script" uid="uid://cjmkcj8hwm7ts" path="res://addons/sky_3d/src/TimeOfDay.gd" id="13_ryguw"]
+[ext_resource type="Texture2D" uid="uid://booncq1vjc17w" path="res://sprites/filleMonstre.png" id="14_jx0wj"]
 [ext_resource type="PackedScene" uid="uid://dbv3j30mi2rej" path="res://assets/Models/GLB format/path-stones-long.glb" id="15_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://b18nlurm08gpb" path="res://sprites/filleMonMask.png" id="15_kkkcx"]
+[ext_resource type="AudioStream" uid="uid://b5qoa7qgf3gh2" path="res://sounds/39.wav" id="15_uypp3"]
+[ext_resource type="AudioStream" uid="uid://tvqt762lpj4k" path="res://sounds/zombie2.wav" id="16_blkrb"]
 [ext_resource type="ArrayMesh" uid="uid://7274ufl6p3yr" path="res://assets/Models/OBJ format/path-stones-short.obj" id="16_yaehf"]
+[ext_resource type="AudioStream" uid="uid://p8itpgvdfvey" path="res://sounds/zombie4.wav" id="17_abqjc"]
 [ext_resource type="ArrayMesh" uid="uid://r0ywsefcutrc" path="res://assets/Models/OBJ format/path-stones-messy.obj" id="17_yaehf"]
+[ext_resource type="AudioStream" uid="uid://bicmjir07m3hg" path="res://sounds/zombie3.wav" id="18_6iyjs"]
 [ext_resource type="PackedScene" uid="uid://ce7eaytwyo0pn" path="res://assets/Models/GLB format/building-type-m.glb" id="18_074og"]
+[ext_resource type="AudioStream" uid="uid://d2j732sbi1k7f" path="res://sounds/skeletton.wav" id="19_4w656"]
 [ext_resource type="PackedScene" uid="uid://cg8ngip84f57e" path="res://assets/Models/GLB format/fence.glb" id="19_cegan"]
 [ext_resource type="PackedScene" uid="uid://c531qn70ibusv" path="res://assets/Models/GLB format/tree-large.glb" id="20_82xsv"]
+[ext_resource type="AudioStream" uid="uid://cg2liv7kqb7vr" path="res://sounds/laugh2.wav" id="20_e71vb"]
 [ext_resource type="PackedScene" uid="uid://bpj8xle1nu15y" path="res://assets/Models/GLB format/tree-small.glb" id="21_getpj"]
+[ext_resource type="AudioStream" uid="uid://cs5b5flgns42v" path="res://sounds/laughdiabolical.wav" id="21_rnkwl"]
 [ext_resource type="PackedScene" uid="uid://d2lx6gfmo1dvw" path="res://assets/Models/FBX format/building-type-n.fbx" id="22_1u8w0"]
+[ext_resource type="AudioStream" uid="uid://diq4q73cqgbds" path="res://sounds/crying.wav" id="22_abqjc"]
 [ext_resource type="PackedScene" uid="uid://67j5fmi1ldee" path="res://assets/Models/FBX format/building-type-u.fbx" id="23_0odxb"]
+[ext_resource type="AudioStream" uid="uid://412he466c54" path="res://sounds/mamamia.wav" id="23_6iyjs"]
 [ext_resource type="PackedScene" uid="uid://bbkt1wyfrtqqm" path="res://assets/Models/FBX format/building-type-f.fbx" id="24_lswn8"]
+[ext_resource type="AudioStream" uid="uid://dat7o2nt55qx6" path="res://sounds/candy1.wav" id="24_vke2r"]
 [ext_resource type="PackedScene" uid="uid://csfhnk18dmbc1" path="res://assets/Models/FBX format/building-type-a.fbx" id="25_0odxb"]
+[ext_resource type="AudioStream" uid="uid://ddbf8jt6pyvtf" path="res://sounds/candy2.wav" id="25_uit24"]
 [ext_resource type="PackedScene" uid="uid://df2j6hcccaxqu" path="res://assets/Models/FBX format/building-type-b.fbx" id="26_lswn8"]
+[ext_resource type="AudioStream" uid="uid://cno3ot5penqy6" path="res://sounds/candy3.wav" id="26_ruth0"]
 [ext_resource type="PackedScene" uid="uid://b0a7vmwju2p6k" path="res://assets/fantasy/Models/GLB format/tree-crooked.glb" id="27_a6jrf"]
+[ext_resource type="AudioStream" uid="uid://j77qw70fp4e" path="res://sounds/candyeating.wav" id="28_pjyto"]
+[ext_resource type="FontFile" uid="uid://cx5pd2fgfvry1" path="res://fonts/HelpMe.ttf" id="28_vke2r"]
 [ext_resource type="PackedScene" uid="uid://b46kaavxo31xy" path="res://assets/Models/FBX format/tree-small.fbx" id="28_xuqvo"]
 [ext_resource type="PackedScene" uid="uid://270u3unlywhq" path="res://assets/rifle.fbx" id="31_seu75"]
 [ext_resource type="ArrayMesh" uid="uid://cldtjw06pytbe" path="res://assets/spook/Models/obj/candyBag.obj" id="32_htxhm"]
-[ext_resource type="ArrayMesh" uid="uid://bk262doo7ka4y" path="res://assets/spook/Models/obj/candyC.obj" id="32_jq2sk"]
+[ext_resource type="AudioStream" uid="uid://d120yc1q6qp88" path="res://sounds/gun1.wav" id="38_gngh3"]
+[ext_resource type="AudioStream" uid="uid://c6o7j5fva84dh" path="res://sounds/gun2.wav" id="39_0n3wm"]
+[ext_resource type="AudioStream" uid="uid://d3firllq8xwwt" path="res://sounds/gun3.wav" id="40_qnost"]
+[ext_resource type="AudioStream" uid="uid://c4m0owocphn33" path="res://sounds/gun4.wav" id="41_wnkbs"]
+[ext_resource type="AudioStream" uid="uid://ca5becmw8yl0" path="res://sounds/gun5.wav" id="42_f6a44"]
+[ext_resource type="AudioStream" uid="uid://cesjidhldkyf6" path="res://sounds/gun6.wav" id="43_0cbny"]
+[ext_resource type="AudioStream" uid="uid://d1oxxwygvt750" path="res://sounds/gun7.wav" id="44_hrvbo"]
+[ext_resource type="ArrayMesh" uid="uid://cqjshw0qhcrpg" path="res://assets/spook/Models/obj/candyA.obj" id="57_vke2r"]
+[ext_resource type="AudioStream" uid="uid://n5y8fox1onl2" path="res://audio/MusiqueMask.wav" id="59_uit24"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kq58d"]
 bg_color = Color(0.62933844, 0, 0.09454159, 1)
@@ -60,9 +90,10 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jq2sk"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0, 0, 0, 0.43137255)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4k2k6"]
+font = ExtResource("28_vke2r")
 font_size = 70
 
 [sub_resource type="Animation" id="Animation_seu75"]
@@ -175,7 +206,7 @@ shader_parameter/moon_texture_flip_u = false
 shader_parameter/moon_texture_flip_v = false
 shader_parameter/moon_size = 0.07
 shader_parameter/atm_moon_mie_tint = Color(0.137255, 0.184314, 0.292196, 1)
-shader_parameter/atm_moon_mie_intensity = 0.7
+shader_parameter/atm_moon_mie_intensity = 0.6837609267234802
 shader_parameter/atm_moon_partial_mie_phase = Vector3(0.36, 1.64, 1.6)
 shader_parameter/starmap_color = Color(1, 1, 1, 0.85490197)
 shader_parameter/starmap_texture = ExtResource("10_cegan")
@@ -199,8 +230,8 @@ shader_parameter/cirrus_absorption = 2.0
 shader_parameter/cirrus_sky_tint_fade = 0.5
 shader_parameter/cirrus_size = 1.0
 shader_parameter/cirrus_uv = Vector2(0.16, 0.11)
-shader_parameter/cirrus_position1 = Vector2(0.68134385, 0.68134385)
-shader_parameter/cirrus_position2 = Vector2(0.68134385, 0.68134385)
+shader_parameter/cirrus_position1 = Vector2(0.7877149, 0.7877149)
+shader_parameter/cirrus_position2 = Vector2(0.7877149, 0.7877149)
 shader_parameter/cirrus_texture = ExtResource("5_w48qg")
 shader_parameter/cumulus_visible = true
 shader_parameter/cumulus_intensity = 0.6
@@ -210,7 +241,7 @@ shader_parameter/cumulus_absorption = 2.0
 shader_parameter/cumulus_noise_freq = 2.7
 shader_parameter/cumulus_sky_tint_fade = 0.0
 shader_parameter/cumulus_size = 0.5
-shader_parameter/cumulus_position = Vector2(13.4276, 13.4276)
+shader_parameter/cumulus_position = Vector2(13.961879, 13.961879)
 shader_parameter/cumulus_texture = ExtResource("6_vivmo")
 shader_parameter/cumulus_partial_mie_phase = Vector3(0.957564, 1.042436, 0.412)
 shader_parameter/cumulus_mie_intensity = 1.0
@@ -237,6 +268,14 @@ tonemap_white = 6.0
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_seu75"]
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vke2r"]
+particle_flag_align_y = true
+spread = 20.0
+initial_velocity_min = 12.0
+initial_velocity_max = 14.0
+scale_min = 0.19999999
+scale_max = 0.5
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_htxhm"]
 particle_flag_align_y = true
 spread = 0.0
@@ -256,10 +295,56 @@ material = SubResource("StandardMaterial3D_jq2sk")
 top_radius = 0.1
 bottom_radius = 0.0
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_facbu"]
+emission_shape = 3
+emission_box_extents = Vector3(30, 1, 20)
+inherit_velocity_ratio = 5.0
+direction = Vector3(0, -1, 0)
+spread = 5.0
+initial_velocity_min = 15.0
+initial_velocity_max = 17.0
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+
+[sub_resource type="Curve" id="Curve_facbu"]
+_limits = [0.0, 0.10391704, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.19209039, 0.09478919), 0.0, 0.0, 0, 0, Vector2(0.25706214, 0.100874424), 0.0, 0.0, 0, 0, Vector2(0.3333333, 0.10391704), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b1qrp"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.57580256, 0.71944284, 1, 1)
+use_particle_trails = true
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_b1qrp"]
+material = SubResource("StandardMaterial3D_b1qrp")
+curve = SubResource("Curve_facbu")
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_uypp3"]
+shuffle = true
+loop = false
+fade_time = 0.0
+stream_count = 7
+stream_0 = ExtResource("38_gngh3")
+stream_1 = ExtResource("39_0n3wm")
+stream_2 = ExtResource("40_qnost")
+stream_3 = ExtResource("41_wnkbs")
+stream_4 = ExtResource("42_f6a44")
+stream_5 = ExtResource("43_0cbny")
+stream_6 = ExtResource("44_hrvbo")
+
 [node name="Node3D" type="Node3D" unique_id=1217932263]
 script = ExtResource("1_h2yge")
-ChildSprites = Array[Texture]([ExtResource("2_h2yge"), ExtResource("4_qsp4k"), ExtResource("4_ok6jj")])
-MonsterSprites = Array[Texture]([ExtResource("3_w48qg"), ExtResource("6_facbu"), ExtResource("7_b1qrp")])
+ChildSprites = Array[Texture]([ExtResource("2_h2yge"), ExtResource("4_qsp4k"), ExtResource("4_ok6jj"), ExtResource("5_rqtf5"), ExtResource("6_1vm84"), ExtResource("7_wu3dr")])
+MonsterSprites = Array[Texture]([ExtResource("3_w48qg"), ExtResource("6_facbu"), ExtResource("7_b1qrp"), ExtResource("8_ruth0"), ExtResource("12_cyx1q"), ExtResource("13_0dhbp"), ExtResource("14_jx0wj"), ExtResource("15_kkkcx")])
+gunSounds = Array[AudioStream]([ExtResource("38_gngh3"), ExtResource("39_0n3wm"), ExtResource("40_qnost"), ExtResource("41_wnkbs"), ExtResource("42_f6a44"), ExtResource("43_0cbny"), ExtResource("44_hrvbo")])
+monsterSounds = Array[AudioStream]([ExtResource("15_uypp3"), ExtResource("16_blkrb"), ExtResource("17_abqjc"), ExtResource("18_6iyjs"), ExtResource("19_4w656"), ExtResource("20_e71vb"), ExtResource("21_rnkwl")])
+kidSounds = Array[AudioStream]([ExtResource("22_abqjc"), ExtResource("23_6iyjs")])
+candySounds = Array[AudioStream]([ExtResource("24_vke2r"), ExtResource("25_uit24"), ExtResource("26_ruth0"), ExtResource("28_pjyto")])
 metadata/_edit_lock_ = true
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=191907570]
@@ -371,10 +456,11 @@ offset_right = 126.5
 offset_bottom = 1006.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 70
-text = "Restart"
+text = "Replay"
 
 [node name="Timer" type="Timer" parent="." unique_id=1804428533]
 unique_name_in_owner = true
+wait_time = 2.0
 autostart = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1722179619]
@@ -385,11 +471,15 @@ libraries/ = SubResource("AnimationLibrary_seu75")
 unique_name_in_owner = true
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 1.2717165, 2.138669)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2001343521]
+[node name="greenGroundMain" type="CSGBox3D" parent="." unique_id=2001343521]
 transform = Transform3D(7.8571987, 0, 0, 0, 0.34627923, 0, 0, 0, 1.0268954, -0.049945116, -0.6520686, -7.901596)
 use_collision = true
 size = Vector3(10.256718, 0.140625, 18.38498)
 material = SubResource("StandardMaterial3D_h2yge")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="greenGroundMain" unique_id=796842227]
+transform = Transform3D(1.0000018, 0, 0, 0, 1.0000204, 0, 0, 0, 1, 0.11996631, -11.891405, -13.669773)
+size = Vector3(8.585876, 2, 47.702576)
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=607160391]
 transform = Transform3D(104.969635, 0, 0, 0, 0.34627923, 0, 0, 0, 2.8043509, -0.049945116, -0.6520686, -299.9128)
@@ -1643,12 +1733,11 @@ skeleton = NodePath("../rifle")
 unique_name_in_owner = true
 transform = Transform3D(-0.97776353, 0.1987983, -0.066765875, 0.20237501, 0.97793347, -0.051872656, 0.054980367, -0.064230904, -0.99641955, -0.3226707, 1.1109389, -0.34122384)
 emitting = false
-amount = 1
 one_shot = true
 explosiveness = 1.0
 fixed_fps = 60
-process_material = SubResource("ParticleProcessMaterial_htxhm")
-draw_pass_1 = ExtResource("32_jq2sk")
+process_material = SubResource("ParticleProcessMaterial_vke2r")
+draw_pass_1 = ExtResource("57_vke2r")
 
 [node name="rifle" parent="." unique_id=1088997799 instance=ExtResource("31_seu75")]
 transform = Transform3D(0.002356179, 0, -0.9999973, 0, 0.9999998, 0, 0.9999973, 0, 0.002356179, -0.50665283, 0, 1.967041)
@@ -1657,12 +1746,41 @@ transform = Transform3D(0.002356179, 0, -0.9999973, 0, 0.9999998, 0, 0.9999973, 
 unique_name_in_owner = true
 transform = Transform3D(-0.9623193, 0.2711038, 0.021086168, 0.27105317, 0.96255004, -0.005275487, -0.021726694, 0.0006387708, -0.99976385, -5.624697, 0.04724124, 0.12352747)
 emitting = false
+amount = 1
 lifetime = 0.15000000000000002
 one_shot = true
 explosiveness = 1.0
 fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_htxhm")
 draw_pass_1 = SubResource("CylinderMesh_4k2k6")
+
+[node name="rain" type="GPUParticles3D" parent="." unique_id=822278649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.629795, -20.828325)
+emitting = false
+amount = 1000
+lifetime = 1.5
+visibility_aabb = AABB(-30, -30, -30, 60, 30, 50)
+trail_enabled = true
+trail_lifetime = 0.2
+process_material = SubResource("ParticleProcessMaterial_facbu")
+draw_pass_1 = SubResource("RibbonTrailMesh_b1qrp")
+
+[node name="gunAudio" type="AudioStreamPlayer" parent="." unique_id=33106750]
+stream = SubResource("AudioStreamPlaylist_uypp3")
+
+[node name="monsterAudio" type="AudioStreamPlayer" parent="." unique_id=466308761]
+
+[node name="kidsAudio" type="AudioStreamPlayer" parent="." unique_id=1070145643]
+
+[node name="candyAudio" type="AudioStreamPlayer" parent="." unique_id=365868194]
+
+[node name="cimetiere" type="Node3D" parent="." unique_id=438842928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5212469, 0)
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1627038541]
+stream = ExtResource("59_uit24")
+pitch_scale = 0.9
+autoplay = true
 
 [connection signal="pressed" from="HUD/Restart" to="." method="_on_restart_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
