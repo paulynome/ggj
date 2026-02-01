@@ -5,15 +5,19 @@
 [ext_resource type="Texture2D" uid="uid://cb8a05vkcppjs" path="res://sprites/Boy0.png" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://dw6m7s7j312xb" path="res://sprites/BoyM0.png" id="3_w48qg"]
 [ext_resource type="PackedScene" uid="uid://3j0udxbij6lp" path="res://entity.tscn" id="3_xuqvo"]
+[ext_resource type="Texture2D" uid="uid://bkypj8rpxv11" path="res://sprites/skeletonH.png" id="4_ok6jj"]
 [ext_resource type="Texture2D" uid="uid://byycw247olp1l" path="res://sprites/ghost1.png" id="4_qsp4k"]
 [ext_resource type="Shader" uid="uid://cvd0x7lon1ur6" path="res://addons/sky_3d/shaders/SkyMaterial.gdshader" id="4_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://cfqk60lpl5ljv" path="res://addons/sky_3d/assets/resources/SNoise.tres" id="5_w48qg"]
+[ext_resource type="Texture2D" uid="uid://cuklb74exn7mk" path="res://sprites/ghostM1.png" id="6_facbu"]
 [ext_resource type="Texture2D" uid="uid://cecwdqjol0ckd" path="res://addons/sky_3d/assets/textures/noiseClouds.png" id="6_vivmo"]
 [ext_resource type="Texture2D" uid="uid://2r8ylu6rg5dp" path="res://addons/sky_3d/assets/thirdparty/textures/moon/MoonMap.png" id="7_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://b816a2ornjmqt" path="res://sprites/skeletonM.png" id="7_b1qrp"]
 [ext_resource type="Texture2D" uid="uid://djpfuyxkryegn" path="res://addons/sky_3d/assets/textures/noise.jpg" id="8_yaehf"]
 [ext_resource type="Texture2D" uid="uid://bm7dot7t7u1q4" path="res://addons/sky_3d/assets/thirdparty/textures/milkyway/StarField.jpg" id="9_074og"]
 [ext_resource type="Texture2D" uid="uid://c1vwcdcdvb74a" path="res://addons/sky_3d/assets/thirdparty/textures/milkyway/Milkyway.jpg" id="10_cegan"]
 [ext_resource type="Script" uid="uid://deo0gxkmk2ahd" path="res://addons/sky_3d/src/Sky3D.gd" id="11_82xsv"]
+[ext_resource type="ArrayMesh" uid="uid://bwueh4pyf005w" path="res://assets/spook/Models/obj/lampPost.obj" id="11_facbu"]
 [ext_resource type="Script" uid="uid://b4tkplvh7fq40" path="res://addons/sky_3d/src/SkyDome.gd" id="12_getpj"]
 [ext_resource type="Script" uid="uid://cjmkcj8hwm7ts" path="res://addons/sky_3d/src/TimeOfDay.gd" id="13_ryguw"]
 [ext_resource type="PackedScene" uid="uid://dbv3j30mi2rej" path="res://assets/Models/GLB format/path-stones-long.glb" id="15_2cqfq"]
@@ -152,7 +156,7 @@ shader_parameter/atm_darkness = 0.5
 shader_parameter/atm_sun_intensity = 18.0
 shader_parameter/atm_day_tint = Color(0.807843, 0.909804, 1, 1)
 shader_parameter/atm_horizon_light_tint = Color(0.980392, 0.635294, 0.462745, 1)
-shader_parameter/atm_night_tint = Color(0.168627, 0.2, 0.25098, 1)
+shader_parameter/atm_night_tint = Color(0.16471507, 0.19536027, 0.24515758, 0.97680134)
 shader_parameter/atm_level_params = Vector3(1, 0, 0)
 shader_parameter/atm_thickness = 0.7
 shader_parameter/atm_beta_ray = Vector3(5.804544e-06, 1.3562913e-05, 3.311258e-05)
@@ -179,7 +183,7 @@ shader_parameter/starmap_flip_u = false
 shader_parameter/starmap_flip_v = false
 shader_parameter/starmap_alignment = Vector3(2.68288, -0.25891, 0.40101)
 shader_parameter/star_rotation_offset = 9.38899
-shader_parameter/star_rotation = -14.3969994293546
+shader_parameter/star_rotation = -8.934090418643475
 shader_parameter/star_tilt = -1.2915436464758039
 shader_parameter/star_field_color = Color(1, 1, 1, 1)
 shader_parameter/star_field_texture = ExtResource("9_074og")
@@ -195,8 +199,8 @@ shader_parameter/cirrus_absorption = 2.0
 shader_parameter/cirrus_sky_tint_fade = 0.5
 shader_parameter/cirrus_size = 1.0
 shader_parameter/cirrus_uv = Vector2(0.16, 0.11)
-shader_parameter/cirrus_position1 = Vector2(0.17625998, 0.17625998)
-shader_parameter/cirrus_position2 = Vector2(0.17625998, 0.17625998)
+shader_parameter/cirrus_position1 = Vector2(0.68134385, 0.68134385)
+shader_parameter/cirrus_position2 = Vector2(0.68134385, 0.68134385)
 shader_parameter/cirrus_texture = ExtResource("5_w48qg")
 shader_parameter/cumulus_visible = true
 shader_parameter/cumulus_intensity = 0.6
@@ -206,7 +210,7 @@ shader_parameter/cumulus_absorption = 2.0
 shader_parameter/cumulus_noise_freq = 2.7
 shader_parameter/cumulus_sky_tint_fade = 0.0
 shader_parameter/cumulus_size = 0.5
-shader_parameter/cumulus_position = Vector2(15.912387, 15.912387)
+shader_parameter/cumulus_position = Vector2(13.4276, 13.4276)
 shader_parameter/cumulus_texture = ExtResource("6_vivmo")
 shader_parameter/cumulus_partial_mie_phase = Vector3(0.957564, 1.042436, 0.412)
 shader_parameter/cumulus_mie_intensity = 1.0
@@ -216,7 +220,7 @@ shader_parameter/azimuthal_grid_rotation_offset = 0.03
 shader_parameter/show_equatorial_grid = false
 shader_parameter/equatorial_grid_color = Color(0, 0.75, 1, 1)
 shader_parameter/equatorial_grid_rotation_offset = 0.03
-shader_parameter/moon_matrix = Basis(7.450581e-09, -0.28295526, 0.95913315, -0.24898845, 0.92892665, 0.27404398, -0.9685065, -0.23881309, -0.070452586)
+shader_parameter/moon_matrix = Basis(7.4505797e-09, -0.27619284, 0.96110225, -0.8792597, 0.45781386, 0.1315624, -0.47634253, -0.8450585, -0.24284524)
 
 [sub_resource type="Sky" id="Sky_qsp4k"]
 sky_material = SubResource("ShaderMaterial_xuqvo")
@@ -225,7 +229,7 @@ sky_material = SubResource("ShaderMaterial_xuqvo")
 background_mode = 2
 sky = SubResource("Sky_qsp4k")
 ambient_light_source = 3
-ambient_light_color = Color(0.23515604, 0.27890667, 0.35, 1)
+ambient_light_color = Color(0.23515595, 0.27890673, 0.35, 1)
 ambient_light_sky_contribution = 0.7
 reflected_light_source = 2
 tonemap_mode = 3
@@ -254,8 +258,8 @@ bottom_radius = 0.0
 
 [node name="Node3D" type="Node3D" unique_id=1217932263]
 script = ExtResource("1_h2yge")
-ChildSprites = Array[Texture]([ExtResource("2_h2yge")])
-MonsterSprites = Array[Texture]([ExtResource("3_w48qg"), ExtResource("4_qsp4k")])
+ChildSprites = Array[Texture]([ExtResource("2_h2yge"), ExtResource("4_qsp4k"), ExtResource("4_ok6jj")])
+MonsterSprites = Array[Texture]([ExtResource("3_w48qg"), ExtResource("6_facbu"), ExtResource("7_b1qrp")])
 metadata/_edit_lock_ = true
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=191907570]
@@ -428,10 +432,84 @@ curve = SubResource("Curve3D_xuqvo")
 [node name="PathFollow3D" parent="Path3D" unique_id=1263315414 instance=ExtResource("3_xuqvo")]
 transform = Transform3D(0.9999982, 0, 0, 0, 1, 0, 0, 0, 0.9999982, -5.5887556, -4.3988228e-05, -18.901628)
 entity_class = 1
-texture = ExtResource("4_qsp4k")
+texture = ExtResource("7_b1qrp")
 
 [node name="path-stones-long2" parent="." unique_id=968383857 instance=ExtResource("15_2cqfq")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -0.582, -15.202)
+
+[node name="Lamps" type="Node3D" parent="." unique_id=1551664319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.410956, -0.6277202, -6.0581875)
+
+[node name="LampPost" type="MeshInstance3D" parent="Lamps" unique_id=2040686441]
+mesh = ExtResource("11_facbu")
+skeleton = NodePath("../../Path3D")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lamps/LampPost" unique_id=1168857424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06538534, 2.438942, 0.38780212)
+
+[node name="LampPost2" type="MeshInstance3D" parent="Lamps" unique_id=679133463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.904164, 0, -2.6051702)
+mesh = ExtResource("11_facbu")
+skeleton = NodePath("../../Path3D")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lamps/LampPost2" unique_id=1346429640]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06538534, 2.438942, 0.38780212)
+
+[node name="LampPost3" type="MeshInstance3D" parent="Lamps" unique_id=1355437081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7902808, 0, -6.835207)
+mesh = ExtResource("11_facbu")
+skeleton = NodePath("../../Path3D")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lamps/LampPost3" unique_id=1274701122]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06538534, 2.438942, 0.38780212)
+
+[node name="LampPost4" type="MeshInstance3D" parent="Lamps" unique_id=127844980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7902808, 0, -9.506181)
+mesh = ExtResource("11_facbu")
+skeleton = NodePath("../../Path3D")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lamps/LampPost4" unique_id=1425670068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06538534, 2.438942, 0.38780212)
+
+[node name="LampPost7" type="MeshInstance3D" parent="Lamps" unique_id=1356137191]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1328773, 0, -11.497049)
+mesh = ExtResource("11_facbu")
+skeleton = NodePath("../../Path3D")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lamps/LampPost7" unique_id=1512181339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06538534, 2.438942, 0.38780212)
+
+[node name="LampPost8" type="MeshInstance3D" parent="Lamps" unique_id=1557957896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.518391, 0, -11.497049)
+mesh = ExtResource("11_facbu")
+skeleton = NodePath("../../Path3D")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lamps/LampPost8" unique_id=494148500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06538534, 2.438942, 0.38780212)
+
+[node name="LampPost9" type="MeshInstance3D" parent="Lamps" unique_id=556656838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1327477, 0, -11.497049)
+mesh = ExtResource("11_facbu")
+skeleton = NodePath("../../Path3D")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lamps/LampPost9" unique_id=186950461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06538534, 2.438942, 0.38780212)
+
+[node name="LampPost5" type="MeshInstance3D" parent="Lamps" unique_id=2019981923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2310667, 0, -7.743578)
+mesh = ExtResource("11_facbu")
+skeleton = NodePath("../../Path3D")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lamps/LampPost5" unique_id=624077265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06538534, 2.438942, 0.38780212)
+
+[node name="LampPost6" type="MeshInstance3D" parent="Lamps" unique_id=2112890508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2310667, 0, 1.7339354)
+mesh = ExtResource("11_facbu")
+skeleton = NodePath("../../Path3D")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lamps/LampPost6" unique_id=1176213635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06538534, 2.438942, 0.38780212)
 
 [node name="PathStonesShort" type="MeshInstance3D" parent="." unique_id=1437818994]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.66993093, -0.5817561, -9.952982)
@@ -1520,29 +1598,29 @@ script = ExtResource("11_82xsv")
 fog_enabled = false
 editor_time_enabled = false
 game_time_enabled = false
-current_time = 23.9998
+current_time = 3.19
 moon_energy = 16.0
 contribution_tween_time = 0.65
 wind_direction = 2.35619451204804
 metadata/_custom_type_script = "uid://deo0gxkmk2ahd"
 
 [node name="SunLight" type="DirectionalLight3D" parent="Sky3D" unique_id=1518419740]
-transform = Transform3D(0.9656312, 0.25788632, 0.032419708, 0, 0.12473143, -0.9921906, -0.2599161, 0.9580902, 0.12044456, 0.032419704, -0.99219054, 0.12044455)
+transform = Transform3D(0.28817192, 0.64809054, 0.7049366, 0, 0.73616576, -0.6768013, -0.9575787, 0.19503513, 0.21214227, 0.7049366, -0.6768013, 0.21214227)
 light_color = Color(0.98, 0.523, 0.294, 1)
 light_energy = 0.0
 light_indirect_energy = 0.065
 
 [node name="MoonLight" type="DirectionalLight3D" parent="Sky3D" unique_id=1356479250]
-transform = Transform3D(0, -0.24898846, -0.96850646, -0.28295523, 0.92892665, -0.23881309, 0.95913315, 0.27404398, -0.070452586, -0.96850646, -0.23881309, -0.070452586)
+transform = Transform3D(0, -0.87925977, -0.47634256, -0.2761928, 0.4578139, -0.8450586, 0.9611022, 0.1315624, -0.24284527, -0.47634253, -0.84505856, -0.24284525)
 light_color = Color(0.572549, 0.776471, 0.956863, 1)
 light_energy = 0.0
 
 [node name="SkyDome" type="Node" parent="Sky3D" unique_id=764077541]
 script = ExtResource("12_getpj")
-sun_azimuth = -2.8786573
-sun_altitude = -3.0165355
-moon_azimuth = -4.7850046
-moon_altitude = -1.8119397
+sun_azimuth = -1.8631135
+sun_altitude = -2.3142052
+moon_azimuth = -5.1838555
+moon_altitude = -2.577471
 moon_light_energy = 16.0
 fog_visible = false
 wind_direction = 2.35619451204804
@@ -1554,7 +1632,7 @@ script = ExtResource("13_ryguw")
 editor_time_enabled = false
 game_time_enabled = false
 dome_path = NodePath("../SkyDome")
-current_time = 23.9998
+current_time = 3.19
 
 [node name="CandyBag" type="MeshInstance3D" parent="." unique_id=753360129]
 transform = Transform3D(0.002356179, 0, -0.9999973, 0, 0.9999998, 0, 0.9999973, 0, 0.002356179, 0.27338153, -0.011486412, 1.3746686)
